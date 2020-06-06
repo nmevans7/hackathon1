@@ -5,4 +5,7 @@ class Address < ApplicationRecord
     "#{self.street} #{self.city}, #{self.state} #{self.zip}"
   end
 
+  validates :street, :city, :state, presence: true
+  validates :zip, numericality: true
+
 end

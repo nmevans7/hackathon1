@@ -13,7 +13,7 @@ times = ['12:00pm','1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm', '12:30pm','
 
 5.times do
   trip = Trip.create(
-    name: Faker::Name.name,
+    name: Faker::Creature::Cat.name,
     start_date: Faker::Date.forward(days: 1),  
     end_date: Faker::Date.forward(days: 5)
   )

@@ -1,6 +1,9 @@
 <h1 class="ui header"><%= @location.name %> </h1>
 <hr>
+<div class="content">
+    <p class="header">
 <p>Trip Duration: <%= @location.days %></p>
+</div>
 <br />
 <%= link_to 'Show Address', location_addresses_path(@location), class: "ui orange button inverted" %>
 <%= link_to 'Edit Location', edit_trip_location_path([@trip, @location]), class: "ui blue button inverted" %>
