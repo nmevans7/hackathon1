@@ -4,10 +4,11 @@
   <i class="paper plane icon"></i>
   Wynnewood Tiger Trips
 </h1>
+<hr />
 <tbody>
 
   <% @trips.each do |trip| %>
-    <h2><%= link_to trip.name, trip %></h2>
+    <h2><%= link_to trip.name, trip, class: "ui white button" %></h2>
   <% end %>
 </tbody>
 

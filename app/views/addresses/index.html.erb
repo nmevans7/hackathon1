@@ -2,7 +2,7 @@
 <hr>
 
 <% @addresses.each do |address| %>
-  <h2><%= link_to address.full_address, [@location,address] %></h2>
+  <h2><%= link_to address.full_address, [@location,address], class: "ui white button" %></h2>
   <% end %>
 
 
