@@ -1,13 +1,14 @@
-<h1><%= @trip.name %> Location:<%= @location.name %></h1>
-<p>Number of Days:<%= @location.days %></p>
+<h1 class="ui header"><%= @location.name %> </h1>
+<hr>
+<p>Trip Duration: <%= @location.days %></p>
 <br />
-<%= link_to 'Address', location_addresses_path(@location) %>
-<br />
-<%= link_to 'Edit Location', edit_trip_location_path([@trip, @location]) %>
-<br />
-<%= link_to 'Delete Location', [@trip, @location], method: :delete %>
-<br />
+<%= link_to 'Show Address', location_addresses_path(@location), class: "ui orange button inverted" %>
+<%= link_to 'Edit Location', edit_trip_location_path([@trip, @location]), class: "ui blue button inverted" %>
 
-<%= link_to 'Back to Locations', trip_locations_path(@trip) %>
+<div class="ui red button inverted">
+<%= link_to 'Delete Location', [@trip, @location], method: :delete, data: { confirm: 'Are you sure?' }  %>
+</div>
+
+<%= link_to 'Back to Locations', trip_locations_path(@trip), class: "ui purple button inverted" %>
 <br />
 <%# link_to 'View Comments', topic_comments_path(@topic) %>

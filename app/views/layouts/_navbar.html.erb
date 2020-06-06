@@ -1,12 +1,18 @@
 <nav>
 <ul>
-<li>
-  <%= link_to 'Trips', trips_path  %>
-</li>
-<li>
-  <%= link_to 'New Trip', new_trip_path %>
-</li>
 
+  <div class="ui secondary  menu">
+  <a class="item active" <%= link_to 'Home', trips_path  %>
+
+  <div class="right menu">
+    <div class="item">
+      <div class="ui icon input">
+        <input type="text" placeholder="Search... (no worky)">
+        <i class="search link icon"></i>
+      </div>
+    </div>
+  </div>
+</div>
 
 </ul>
 </nav>

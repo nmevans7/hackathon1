@@ -1,11 +1,24 @@
-<h1>New Address</h1>
+<h1 class="ui header">New Address</h1>
 
-<%= form_for [@location, @address] do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <br />
-  <%= f.label :days %>
-  <%= f.text_field :days%>
-  <br />
-  <%= f.submit %>
+<%= form_with(model: [@location, @address], local: true, class: "ui form" ) do |f| %>
+  <div class="field">
+  <%= f.label :street %>
+  <%= f.text_field :street, required: true, autofocus: true, placeholder: "Street" %>
+  </div>
+  <div class="field">
+  <%= f.label :city %>
+  <%= f.text_field :city, required: true, placeholder: "City"  %>
+  </div>
+  <div class="field">
+  <%= f.label :state %>
+  <%= f.text_field :state, required: true, placeholder: "State" %>
+  </div>
+  <div class="field">
+  <%= f.label :zip %>
+  <%= f.text_field :zip, required: true, placeholder: "00000" %>
+  </div>
+  <%= f.submit nil, class: "ui green button inverted" %>
 <% end %>
+
+
+

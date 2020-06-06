@@ -1,5 +1,19 @@
-<h1><%= @location.name %> <%= @address.street %> </h1>
-<p><%= @address.street %></p>
-<%= link_to 'Edit Address', edit_location_address_path([@location, @address]) %>
-<%= link_to 'Delete Address', [@location, @address], method: :delete %>
-<%= link_to 'Back to Addresses', location_address_path(@location) %>
+<h1 class="ui header"><%= @location.name %> </h1>
+
+<div class="content">
+    <p class="header">
+<h2><%= @address.full_address %></h2>
+    </p>
+<br />
+
+<div class = "extra content">
+<%= link_to 'Edit Address', edit_location_address_path([@location, @address]), class: "ui blue button inverted" %>
+
+<div class="ui red button inverted">
+<%= link_to 'Delete Address', [@location, @address], method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
+
+<%= link_to 'Back to Addresses', location_addresses_path(@location), class: "ui purple button inverted" %>
+</div>
+<br />
+

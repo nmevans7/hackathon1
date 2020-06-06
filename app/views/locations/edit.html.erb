@@ -1,11 +1,15 @@
-  <h1>Edit Location</h1>
+  <h1 class="ui header">Edit Location</h1>
 
-<%= form_for [@trip, @location] do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <br />
-  <%= f.label :days %>
-  <%= f.text_field :days%>
-  <br />
-  <%= f.submit %>
-<% end %>
+  <%= form_with(model: [@trip, @location], local: true, class: "ui form" ) do |f| %>
+
+    <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true, autofocus: true, placeholder: "Location Name" %>
+    </div>
+    <div class="field">
+    <%= f.label :days %>
+    <%= f.text_field :days, required: true, placeholder: "Days"%>
+    </div>
+    
+    <%= f.submit nil, class: "ui green button inverted" %>
+  <% end %>

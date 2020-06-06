@@ -1,8 +1,9 @@
-<h1><%= @trip.name %></h1>
+<h1 class="ui header"><%= @trip.name %></h1>
 <hr />
-<p>What would you like to do?</p>
-<%= link_to 'View Locations', trip_locations_path(@trip) %>
-<br />
-<%= link_to 'Edit Trip', edit_trip_path(@trip) %>
-<br />
-<%= link_to 'Delete Trip', @trip, method: :delete %>
+<h3>What would you like to do?</h3>
+<%= link_to 'View Locations', trip_locations_path(@trip), class: "ui orange button inverted" %>
+<%= link_to 'Edit Trip', edit_trip_path(@trip),class: "ui blue button inverted" %>
+
+<div class="ui red button inverted">
+<%= link_to 'Delete Trip', @trip, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>

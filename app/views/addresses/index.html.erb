@@ -1,14 +1,13 @@
-<h1>Addresses</h1>
+<h1 class="ui header">Addresses</h1>
+<hr>
 
-<ul>
 <% @addresses.each do |address| %>
-  <li><%= link_to address.full_address, [@location,address] %></li>
+  <h2><%= link_to address.full_address, [@location,address] %></h2>
   <% end %>
-  </ul>
 
-  <%= link_to 'Create a new address', new_location_address_path(@location) %>
-  <br />
-  <%= link_to 'Edit Address', new_location_address_path(@location) %>
+
+  <%= link_to 'Create a new address', new_location_address_path(@location), class: "ui green button inverted" %>
+
 
 
  

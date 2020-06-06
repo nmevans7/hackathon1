@@ -1,14 +1,15 @@
-<h1><%= @trip.name %> Trips</h1>
+<h1 class="ui header"><%= @trip.name %> Locations</h1>
+<hr></hr>
 
-<ul>
   <% @locations.each do |location| %>
-    <li>
+    <h2>
       <%= link_to location.name, [@trip, location] %>
       <div></div>
-      </li>
+      </h2>
 
   <% end %>
 
-<%= link_to 'Create New Location', new_trip_location_path(@trip) %>
+
+<%= link_to 'Create New Location', new_trip_location_path(@trip), class: "ui green button inverted" %>
 
 

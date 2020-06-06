@@ -1,11 +1,14 @@
-<h1>Click on a Trip to view Itinerary</h1>
 
+<h1 class="ui center aligned icon header">
+  <i class="paper plane icon"></i>
+  Wynnewood Tiger Trips
+</h1>
+<tbody>
 
-<ul>
   <% @trips.each do |trip| %>
-    <li><%= link_to trip.name, trip %></li>
+    <h2><%= link_to trip.name, trip %></h2>
   <% end %>
-</ul>
+</tbody>
 
-<%= link_to 'Create a new trip', new_trip_path %>
+<%= link_to 'Create a New Trip', new_trip_path, class: "ui green button inverted" %>
 
