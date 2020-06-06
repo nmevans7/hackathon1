@@ -1,0 +1,18 @@
+<h1>Edit a Trip!</h1>
+
+
+<%= form_with(model: @trip, local: true, class: "ui form") do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true, autofocus: true, placeholder: "Trip Name" %>
+  </div>
+  <div class="field">
+    <%= f.label :start_date %>
+    <%= f.text_field :start_date, required: true, placeholder: "Start Date" %>
+  </div>
+  <div class="field">
+    <%= f.label :end_date %>
+    <%= f.text_field :end_date, required: true, placeholder: "End Date" %>
+  </div>
+  <%= f.submit nil, class: "ui green button inverted" %>
+<% end %>

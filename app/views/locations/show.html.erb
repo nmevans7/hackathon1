@@ -1,0 +1,13 @@
+<h1><%= @trip.name %> Location:<%= @location.name %></h1>
+<p>Number of Days:<%= @location.days %></p>
+<br />
+<%= link_to 'Address', location_addresses_path(@location) %>
+<br />
+<%= link_to 'Edit Location', edit_trip_location_path([@trip, @location]) %>
+<br />
+<%= link_to 'Delete Location', [@trip, @location], method: :delete %>
+<br />
+
+<%= link_to 'Back to Locations', trip_locations_path(@trip) %>
+<br />
+<%# link_to 'View Comments', topic_comments_path(@topic) %>

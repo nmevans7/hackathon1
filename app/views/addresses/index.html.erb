@@ -1,0 +1,14 @@
+<h1>Addresses</h1>
+
+<ul>
+<% @addresses.each do |address| %>
+  <li><%= link_to address.full_address, [@location,address] %></li>
+  <% end %>
+  </ul>
+
+  <%= link_to 'Create a new address', new_location_address_path(@location) %>
+  <br />
+  <%= link_to 'Edit Address', new_location_address_path(@location) %>
+
+
+ 

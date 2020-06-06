@@ -1,0 +1,11 @@
+<h1>New Address</h1>
+
+<%= form_for [@location, @address] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br />
+  <%= f.label :days %>
+  <%= f.text_field :days%>
+  <br />
+  <%= f.submit %>
+<% end %>
